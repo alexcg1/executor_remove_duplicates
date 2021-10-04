@@ -1,4 +1,4 @@
-from jina import Executor, DocumentArray, requests, Document, Flow
+from jina import Executor, DocumentArray, requests
 
 
 class RemoveDuplicates(Executor):
@@ -17,26 +17,3 @@ class RemoveDuplicates(Executor):
             del docs[idx]
 
         return docs
-
-
-docs = DocumentArray(
-    [
-        Document(text="foo"),
-        Document(text="bar"),
-        Document(text="baz"),
-        Document(text="qux"),
-        Document(text="quux"),
-        Document(text="quux"), # duplicate
-        Document(text="quuz"),
-        Document(text="corge"),
-        Document(text="grault"),
-        Document(text="grault"), # duplicate
-        Document(text="grault"), # duplicate
-        Document(text="grault"), # duplicate
-    ]
-)
-
-flow = Flow().add(uses=RemoveDuplicates)
-
-with flow:
-    flow.index(inputs=docs)
