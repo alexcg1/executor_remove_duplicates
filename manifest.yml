@@ -1,0 +1,4 @@
+manifest_version: 1
+name: RemoveDuplicates
+description: "Removes Documents which have duplicate content fields"
+keywords: ["utility", "duplicates", "copies"]
