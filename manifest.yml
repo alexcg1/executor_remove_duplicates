@@ -2,3 +2,4 @@ manifest_version: 1
 name: RemoveDuplicates
 description: "Removes Documents which have duplicate content fields"
 keywords: ["utility", "duplicates", "copies"]
+url: "https://github.com/alexcg1/executor_remove_duplicates"
