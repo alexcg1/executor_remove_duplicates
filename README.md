@@ -8,7 +8,7 @@
 ```python
 from jina import Flow
 	
-f = Flow().add(uses='jinahub+docker://executor_remove_duplicates')
+f = Flow().add(uses='jinahub+docker://RemoveDuplicates')
 ```
 
 #### via source code
@@ -16,7 +16,7 @@ f = Flow().add(uses='jinahub+docker://executor_remove_duplicates')
 ```python
 from jina import Flow
 	
-f = Flow().add(uses='jinahub://executor_remove_duplicates')
+f = Flow().add(uses='jinahub://RemoveDuplicates')
 ```
 
 - To override `__init__` args & kwargs, use `.add(..., uses_with: {'key': 'value'})`
